@@ -1,0 +1,19 @@
+name: buck_5v_overcurrent_trip
+resources:
+  psu: "SIM::PSU"
+  eload: "SIM::ELOAD"
+  dmm: "SIM::DMM"
+input_voltage_v: 12.0
+input_current_limit_a: 1.2
+sweep:
+  start_a: 0.1
+  stop_a: 5.0
+  points: 11
+  settle_s: 0.0
+  samples: 5
+limits:
+  vout_nominal_v: 5.0
+  vout_tolerance_pct: 2.0
+  min_efficiency_pct: 88.0
+  efficiency_from_load_a: 1.0
+  max_load_regulation_pct: 2.0
